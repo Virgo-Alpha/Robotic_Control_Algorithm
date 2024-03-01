@@ -2,9 +2,32 @@ def move_robot(commands, initial_position):
     # Define grid dimensions
     grid_width = 10
     grid_height = 10
+
+    # validate the input
+    if not isinstance(commands, list):
+        raise ValueError("Commands should be a list of strings.")
+    
+    if not all(isinstance(command, str) for command in commands):
+        raise ValueError("Commands should be a list of strings.")
+    
+    if not isinstance(initial_position, tuple):
+        raise ValueError("Initial position should be a tuple.")
+    
+    if len(initial_position) != 3:
+        raise ValueError("Initial position should be a tuple of 3 elements.")
     
     # Unpack initial position tuple
     x, y, orientation = initial_position
+
+    # Validate initial position
+    if not isinstance(x, int) or not isinstance(y, int):
+        raise ValueError("Initial position coordinates should be integers.")
+    
+    if not (0 <= x < grid_width) or not (0 <= y < grid_height):
+        raise ValueError("Initial position coordinates should be within the grid.")
+    
+    if orientation not in ['N', 'E', 'S', 'W']:
+        raise ValueError("Orientation should be one of 'N', 'E', 'S', 'W'.")
     
     # Define orientation changes for left and right turns
     orientation_changes = {
