@@ -66,9 +66,3 @@ def move_robot(commands, initial_position):
     
     # Return final position
     return (x, y, orientation)
-
-# Example usage:
-commands = ['F', 'R', 'F', 'L', 'B']  # Sample commands
-initial_position = (0, 0, 'N')  # Sample initial position
-final_position = move_robot(commands, initial_position)
-print("Final Position:", final_position) # Output: (1, 0, 'N')

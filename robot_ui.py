@@ -65,6 +65,15 @@ def update_initial_position(*args):
 root = tk.Tk()
 root.title("Robot Control UI")
 
+# Instructions text
+instructions_text = """Instructions:
+- Use the drop-down menus to select the initial position (x, y) and orientation.
+- Click the movement buttons (or use arrow keys) to move the robot.
+- Enter movement commands (F, B, L, R) manually in the Commands field.
+"""
+instructions_label = tk.Label(root, text=instructions_text, justify="left")
+instructions_label.grid(row=10, column=0, columnspan=4, padx=10, pady=10)
+
 # Create input fields and labels
 tk.Label(root, text="Initial Position (x, y):").grid(row=0, column=0, sticky="w")
 x_var = StringVar(root)
