@@ -28,7 +28,7 @@ def move_robot(commands, initial_position):
             dx, dy = movement_changes[orientation]
             x += dx
             y += dy
-            # Check boundary conditions
+            # Check boundary conditions to be less than grid width and height (10, 10)
             x = max(0, min(x, grid_width - 1))
             y = max(0, min(y, grid_height - 1))
         elif command == 'B':
@@ -48,4 +48,4 @@ def move_robot(commands, initial_position):
 commands = ['F', 'R', 'F', 'L', 'B']  # Sample commands
 initial_position = (0, 0, 'N')  # Sample initial position
 final_position = move_robot(commands, initial_position)
-print("Final Position:", final_position) # Output: (1, 1, 'N')
+print("Final Position:", final_position) # Output: (1, 0, 'N')
