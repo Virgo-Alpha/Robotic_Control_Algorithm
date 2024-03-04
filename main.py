@@ -1,3 +1,7 @@
+# Improvements:
+# TODO: Use OOP
+# ! the functionality for moving backwards and forwards was unfortunately inverted.
+
 def move_robot(commands, initial_position):
     # Define grid dimensions
     grid_width = 10
