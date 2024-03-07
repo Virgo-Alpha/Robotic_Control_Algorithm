@@ -1,5 +1,3 @@
-## CODE_OF_CONDUCT.md
-
 ## Code of Conduct
 
 This project is intended to be a welcoming and inclusive space for everyone. We expect all contributors to follow this code of conduct:
